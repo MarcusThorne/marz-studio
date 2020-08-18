@@ -4,13 +4,19 @@
   <%= simple_form_for(@art) do |f| %>
     <%= f.input :name %>
 
-    <%= link_to 'Back', root_path, class: "btn btn-primary mb-4" %>
+    <%= f.input :artist %>
 
+    <%= f.input :style %>
 
+    <%= f.input :price %>
+
+    <%= f.input :description %>
 
     <%= f.input :photo, as: :file %>
 
-    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to 'Back', root_path, class: "btn btn-primary mt-3 mr-4" %>
+
+    <%= f.submit class: "btn btn-primary mt-3" %>
   <% end %>
 
 </div>
