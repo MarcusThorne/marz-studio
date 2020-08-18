@@ -2,3 +2,14 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "filter";
+@import "header";
+
+body {
+  background-color: #D2D1CF;
+}
+
+#filter-search-bar {
+  background-color: white;
+  box-shadow: 2px 2px 4px 0px rgba(182, 182, 182, 0.2);
+}

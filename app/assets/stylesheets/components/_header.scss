@@ -1,0 +1,26 @@
+header {
+  padding: 16px;
+  background-color: #D2D1CF;
+  border-bottom: 1px solid grey;
+  position: relative;
+  padding: 56px;
+}
+
+header > h1 {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  font-weight: bolder;
+}
+
+#search-bar {
+  position: absolute;
+  right: 200px;
+  top: 48px;
+}
+
+.avatar-large {
+  position: absolute;
+  right: 40px;
+  top: 32px;
+}
