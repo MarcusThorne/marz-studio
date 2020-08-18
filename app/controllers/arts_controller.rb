@@ -5,7 +5,7 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
-    @purchase = @art.purchase
+    # @purchase = @art.purchase
   end
 
   def new
@@ -14,8 +14,9 @@ class ArtsController < ApplicationController
 
   def create
     @art = Art.new(art_params)
+    @art.user = current_user
     if @art.save
-      redirect_to art_path(@art)
+      redirect_to @art
     else
       render :new
     end
