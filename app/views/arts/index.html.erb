@@ -1,6 +1,9 @@
 <div>
   <header>
-    <h1>Gallery</h1>
+    <%= link_to root_path do %>
+      <h1>MARZ Studio</h1>
+    <% end %>
+
     <form id="search-bar" class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
@@ -136,6 +139,33 @@
       </div>
     </div>
 
+    <div>
+      <div id="page-info">
+        <h2 style="font-weight:bold; ">View our Gallery</h2>
+        <p>Some words for some stuff and that woo what a great bit of text here yay!</p>
+      </div>
+
+      <div class="arts-cards">
+        <% @arts.each do |art| %>
+          <%= link_to art_path(art) do %>
+            <div class="art-card">
+            <% if art.photo.attached? %>
+              <%= cl_image_tag art.photo.key,height: 350, width: 300, crop: :fill, radius: 8, id:"photo" %>
+            <% end %>
+            <div style="display:flex; justify-content:space-between;">
+              <div class="content">
+                <h5 style="font-weight:bolder;"><%= art.name %></h5>
+                <p><%= art.artist %></p>
+              </div>
+              <div class="content">
+                <p>£<%= art.price %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  
   </body>
 </div>
 
