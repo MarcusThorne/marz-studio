@@ -1,9 +1,15 @@
 .filter-box {
-  background-color: white;
+  background-color: rgb(197, 197, 197);
   padding: 8px;
   margin: 8px;
 }
 
 #filter-search-bar p {
   margin-bottom: 0!important;
+  background-color: rgb(197, 197, 197);
+}
+
+#filter-search-bar {
+  background-color: rgb(197, 197, 197);
+  box-shadow: 2px 2px 4px 0px rgba(182, 182, 182, 0.2);
 }
