@@ -1,16 +1,4 @@
 <div>
-  <header>
-    <%= link_to root_path do %>
-      <h1>MARZ Studio</h1>
-    <% end %>
-
-    <form id="search-bar" class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-  </header>
-
   <body>
     <div id="index-content" style="display:flex;">
       <div id="filter-search-bar">
@@ -144,6 +132,8 @@
         <h2 style="font-weight:bold; ">View our Gallery</h2>
         <p>Some words for some stuff and that woo what a great bit of text here yay!</p>
       </div>
+
+      <div id="line"></div>
 
       <div class="arts-cards">
         <% @arts.each do |art| %>
