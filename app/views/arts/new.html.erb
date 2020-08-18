@@ -1,1 +1,17 @@
-new.html.erb
+<div class="container">
+  <h1 class="text-center m-4">Add a new art</h1>
+
+  <%= simple_form_for(@art) do |f| %>
+    <%= f.input :name %>
+
+    <%= link_to 'Back', root_path, class: "btn btn-primary mb-4" %>
+
+
+
+    <%= f.input :photo, as: :file %>
+
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+
+</div>
+
