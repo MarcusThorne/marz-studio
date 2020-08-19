@@ -1,6 +1,6 @@
 class PurchasesController < ApplicationController
-  before_action :set_task, only: [:new, :create]
-
+  before_action :set_tasks, only: [:new, :create]
+  
   def new
     @purchase = Purchase.new
   end
