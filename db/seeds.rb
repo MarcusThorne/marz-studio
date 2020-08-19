@@ -17,7 +17,7 @@ User.destroy_all
   user = User.create!(email: Faker::Internet.email, password: "123546")
   puts "User created #{user.email}"
     1.times do #3
-      art = Art.create!(name: Faker::University.name, style: Faker::Esport.player, price: Faker::Number.number(digits: rand(1..7)), description: Faker::Lorem.paragraphs, artist: Faker::Artist.name, user: user)
+      art = Art.create!(name: Faker::University.name, style: Faker::Esport.player, price: Faker::Number.number(digits: rand(1..7)), description: Faker::Lorem.paragraphs.first, artist: Faker::Artist.name, user: user)
       file = URI.open('https://source.unsplash.com/random')
       art.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
       puts "art created"
