@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :purchases
   has_many :arts
   has_one_attached :photo
-  validates :photo, presence: true
+  # validates :photo, presence: true
 end

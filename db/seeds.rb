@@ -16,12 +16,12 @@ User.destroy_all
 5.times do
   user = User.create!(email: Faker::Internet.email, password: "123546")
   puts "User created #{user.email}"
-    3.times do
-      art = Art.create!(name: Faker::University.name, style: Faker::Esport.player, price: Faker::Number.number(digits: 10), description: Faker::Lorem.paragraphs, artist: Faker::Artist.name, user: user)
-      file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+    1.times do #3
+      art = Art.create!(name: Faker::University.name, style: Faker::Esport.player, price: Faker::Number.number(digits: rand(1..7)), description: Faker::Lorem.paragraphs, artist: Faker::Artist.name, user: user)
+      file = URI.open('https://source.unsplash.com/random')
       art.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
       puts "art created"
-        3.times do
+        1.times do #3
           purchase = Purchase.create!(art: art, user: User.all.sample)
         end
     end

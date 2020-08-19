@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :arts, only:[:index, :show, :new, :create] do
-    resources :purchases, only: [:new, :create]
+    resources :purchases, only: [:show, :new, :create]
   end
 
   get "myprofile", to: "pages#profile"
