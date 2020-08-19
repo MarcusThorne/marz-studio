@@ -1,5 +1,4 @@
 class PurchasesController < ApplicationController
-  before_action :set_art, only: [:new, :create]
   before_action :set_tasks, only: [:new, :create]
   
   def new
@@ -23,7 +22,7 @@ class PurchasesController < ApplicationController
     params.require(:purchase).permit()
   end
 
-  def set_art
+  def set_tasks
     @art = Art.find(params[:art_id])
   end
 end
