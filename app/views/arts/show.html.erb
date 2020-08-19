@@ -20,7 +20,7 @@
   </nav>
 </div> -->
 
-<div class="container">
+<div class="container1">
 
     <div class="wrapper d-flex">
 
@@ -37,7 +37,7 @@
       <div class="button d-flex">
       <!-- <h1><%= @art.artist %></h1> -->
       <h1><%=@art.name %></h1>
-      <button>Purchase</button>
+      <%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary ml-4" %>
     </div>
 
       <div class="art-info">
