@@ -1,47 +1,60 @@
+  <!-- <div class="main-header">
+  <nav class="navigation ">
+    <ul class="list d-flex justify-content-center pt-5">
+      <li id="ctl00">
+        <a class=" nav-item p-4" href="/galleries/lisson-gallery/">Home</a>
+      </li>
+      <li id="ctl00">
+        <a class="nav-item active p-4" href="/galleries/lisson-gallery/artworks/">Index</a>
+      </li>
+      <li id="ctl00">
+        <a class=" nav-item p-4" href="/galleries/lisson-gallery/artists/">Show</a>
+      </li>
+      <li id="ctl00">
+        <a class=" nav-item p-4" href="/galleries/lisson-gallery/exhibitions/">Purchases</a>
+      </li>
+      <li id="ctl00">
+        <a class=" nav-item p-4" href="/galleries/lisson-gallery/art-fairs/"></a>
+      </li>
+    </ul>
+  </nav>
+</div> -->
 
-<div class="main-container">
-  <div class="art-photo">
+<div class="container">
+
+    <div class="wrapper d-flex">
+
+    <div class="left">
+      <div class="art-photo">
     <% if @art.photo.attached? %>
-      <%= cl_image_tag @art.photo.key %>
+      <div class="image"><%= cl_image_tag @art.photo.key %></div>
     <% else %>
       url('https://images.unsplash.com/photo-1497990902153-c6d041aad676?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1107&q=80')
     <% end %>
-</div>
-<div class="product-shop">
-  <div class="name-section">
-    <h1><%= @art.artist %></h1>
-  </div>
-  <div class="price-info">
-    <div class="price-box">
-      <span class="price"><%= @art.price %></span>
+      </div>
     </div>
-  </div>
-  <div class="info-wrapper">
-    <div class="art-info">
-      <p><%= @art.name %></p>
-      <p><%= @art.style %></p>
+    <div class="right">
+      <div class="button d-flex">
+      <!-- <h1><%= @art.artist %></h1> -->
+      <h1><%=@art.name %></h1>
+      <button>Purchase</button>
     </div>
-  </div>
-  <div class="add_to_cart_buttons">
-    <button type="button" title="Add to bag" class="button-primary">
-      <span>Add to bag</span>
-    </button>
-    <div class="visit_see_link button-primary">
-      <span>More like this</span>
+
+      <div class="art-info">
+        <p id="price-tag">Price:  £<%= @art.price %></p>
+         <%#= @art.name %>
+        <p id="price-tag">Style:  <%= @art.style %></p>
+      </div>
+      <div class="art-description">
+         <%= @art.description %>
+      </div>
     </div>
   </div>
 </div>
 
-  </div>
-<div class="art-info">
-  <div class="art-infos">
-    <p class="header header_author">
-    About<%=@art.artist %>
-    </p>
-    <div class="content content_art">
-    <div class="content_bio">
-      <%= @art.description %>
-    </div>
-    </div>
-  </div>
-</div>
+
+
+
+
+
+
