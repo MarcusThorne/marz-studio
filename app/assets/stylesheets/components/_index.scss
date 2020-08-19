@@ -4,16 +4,16 @@
 @import "navbar";
 @import "filter";
 @import "header";
+@import "myprofile";
 @import "card";
 @import "carousel";
-
 
 body {
   background-color: #D2D1CF;
 }
 
 #filter-search-bar {
-  background-color: white;
+  background-color: #D2D1CF;
   box-shadow: 2px 2px 4px 0px rgba(182, 182, 182, 0.2);
 }
 
@@ -21,12 +21,17 @@ body {
   margin: 32px;
 }
 
-.grid-container {
-  display: inline-grid;
-}
 
-#line {
-  border: solid 2px black;
-  width: 900px;
-  margin: 24px;
-}
+// #page-info {
+//   margin: 32px;
+// }
+
+// .grid-container {
+//   display: inline-grid;
+// }
+
+// #line {
+//   border: solid 2px black;
+//   width: 900px;
+//   margin: 24px;
+// }

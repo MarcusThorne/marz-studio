@@ -32,49 +32,20 @@
       </a>
     </div>
 
+  <% @arts.each do |art| %>
+  <%= link_to art.name, art_path(art), class:"btn btn-primary" %>
+  <% end %>
 
-  <div class="container row m-4">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
+    <%= link_to "Register", new_user_registration_path, class:"btn btn-primary" %>
+  <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %>
 
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-  </div>
 
   <div class="container row m-4">
     <h2></h2>
 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">$0 - $1000</h5>
         <%= link_to arts_path do  %>
             <div class="btn btn-primary">Show me the Art</div>
           <% end %>
@@ -83,8 +54,7 @@
 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">$1000 - $10,000</h5>
         <%= link_to arts_path do  %>
             <div class="btn btn-primary">Show me the Art</div>
           <% end %>
@@ -93,8 +63,7 @@
 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">$10,000 - $100,000</h5>
         <%= link_to arts_path do  %>
             <div class="btn btn-primary">Show me the Art</div>
           <% end %>
@@ -103,8 +72,7 @@
 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">$100,000 - $1,000,000</h5>
         <%= link_to arts_path do  %>
             <div class="btn btn-primary">Show me the Art</div>
           <% end %>
@@ -113,8 +81,7 @@
 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">$1,000,000 - $10,000,000</h5>
         <%= link_to arts_path do  %>
             <div class="btn btn-primary">Show me the Art</div>
           <% end %>
