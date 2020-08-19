@@ -1,0 +1,16 @@
+<h1><%= @art.name %></h1>
+
+  <%= simple_form_for(@art) do |f| %>
+    <%= f.input :name %>
+    <div class="form" style="display: flex; flex-direction: column;">
+      <label for="">Card Number</label>
+      <input type="Card Number" placeholder="Enter Card Number">
+      <label for="" >Expiration Date</label>
+      <input type="Expiration" placeholder="MM / YY">
+      <label for="" >Security Code (CVV)</label>
+      <input type="Expiration" placeholder="XXX">
+    </div>
+    <%= link_to 'Back', art_path(@art), class: "btn btn-primary mt-3 mr-4" %>
+
+    <%= f.submit class: "btn btn-primary mt-3" %>
+  <% end %>
