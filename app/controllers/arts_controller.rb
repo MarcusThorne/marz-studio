@@ -5,7 +5,6 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
-    # @purchase = @art.purchase
   end
 
   def new
