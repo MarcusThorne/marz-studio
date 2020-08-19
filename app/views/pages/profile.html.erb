@@ -8,6 +8,14 @@
     <img src="https://www.kindpng.com/picc/m/22-223930_avatar-person-neutral-man-blank-face-buddy-facebook.png" alt="profile pic" style="width:100%" class="mb-4">
   <% end %>
 
-  <p>Purchase History</p>
+  <h2>Purchase History</h2>
+  <p>------------------</p>
+
+  <% @arts.each do |art| %>
+    <h3> <%= art.name %> </h3>
+    <h5> <%= art.artist %> </h5>
+    <h5> £ <%= art.price %> </h5>
+    <img src="<%= cl_image_path art.photo.key %>" alt="profile pic" style="width:100%" class="mb-4">
+  <% end %>
 
 </div>

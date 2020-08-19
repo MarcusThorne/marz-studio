@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-
+    @arts = current_user.purchases.map do |purchase|
+      purchase.art
+    end
   end
 end
