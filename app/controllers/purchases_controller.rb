@@ -8,8 +8,9 @@ class PurchasesController < ApplicationController
   def create
     @purchase = Purchase.new(purchases_params)
     @purchase.art = @art
-    if @purchase.save
-      redirect_to @art
+    @purchase.user = current_user
+    if @purchase.save!
+      redirect_to myprofile_path
     else
       render :new
     end
