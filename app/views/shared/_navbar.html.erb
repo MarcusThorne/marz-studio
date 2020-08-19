@@ -12,8 +12,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <%= link_to "Register", new_user_registration_path, class:"btn btn-primary" %>
-  <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %>
+  <div class="register-buttons">
+    <%= link_to "Register", new_user_registration_path, class:"btn btn-primary" %>
+    <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">

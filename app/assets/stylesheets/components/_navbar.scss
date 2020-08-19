@@ -17,7 +17,7 @@
 #search-bar {
   position: absolute;
   top: 35px!important;
-  right: 150px!important;
+  right: 370px!important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +31,17 @@
 }
 
 #search-bar > input {
-  width: 50%;
+  width: 100%;
   margin: 0;
 }
 
 .logo {
   height: 400px;
   width: 800px;
+}
+
+.register-buttons {
+  position: absolute;
+  top: 35px!important;
+  right: 110px!important;
 }
