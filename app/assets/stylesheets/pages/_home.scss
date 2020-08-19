@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+#home-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 190px;
+}
+
+#home-cards {
+  margin: 8px;
+}
