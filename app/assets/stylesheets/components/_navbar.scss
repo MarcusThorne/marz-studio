@@ -18,4 +18,19 @@
   position: absolute;
   top: 35px!important;
   right: 150px!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  flex-wrap: nowrap;
+}
+
+#search-bar > button {
+  width: 50%;
+  margin: 0;
+}
+
+#search-bar > input {
+  width: 50%;
+  margin: 0;
 }
