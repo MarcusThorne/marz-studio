@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="row">
+<div class="container font-oswald">
+  <div class="row font-oswald">
 
     <div class="col-12 col-lg-4">
-      <h2 class="m-4" style="text-align:center">Profile History</h2>
+      <h2 class="m-4 font-oswald" style="text-align:center">Profile History</h2>
       <div class="card mb-4">
 
         <% if current_user.photo.attached? %>
@@ -11,13 +11,13 @@
           <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="profile pic" style="width:100%">
         <% end %>
 
-        <%= link_to "Sell your art", new_art_path, class:"btn btn-primary" %>
+        <%= link_to "Sell your art", new_art_path, class:"btn new-button" %>
       </div>
     </div>
 
     <div class="col-12 col-lg-8">
       <div class="mt-5 mb-4">
-        <div class="profile-purchase mb-4">
+        <div class="profile-purchase mb-4 font-oswald">
           <h4>Purchase History</h4>
           <% if @arts.count == 0 %>
               <h5> You haven't purchased anything yet! </h5>
@@ -37,7 +37,7 @@
             <% end %>
           </div>
 
-        <div class="profile-sell">
+        <div class="profile-sell font-oswald">
           <h4>Listing Items</h4>
           <% if @arts_sell.count == 0 %>
             <h5> You haven't listed anything for sale yet! </h5>
@@ -48,7 +48,7 @@
                   <% if art.photo.attached? %>
                     <%= cl_image_tag art.photo.key %>
                   <% end %>
-                  <div class="profile-card-product-infos">
+                  <div class="profile-card-product-infos font-oswald">
                     <h2>Product name: <%= art.name %></h2>
                     <p>Artist name: <%= art.artist %> </p>
                     <p><strong>£ <%= art.price %></strong></p>

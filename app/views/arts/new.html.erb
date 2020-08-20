@@ -1,5 +1,5 @@
-<div class="container">
-  <h1 class="text-center m-4">Add a new art</h1>
+<div class="container full-page font-oswald">
+  <h1 class="text-center m-4 font-oswald">Add a new art</h1>
 
   <%= simple_form_for(@art) do |f| %>
     <%= f.input :name %>
@@ -12,11 +12,11 @@
 
     <%= f.input :description %>
 
-    <%= f.input :photo, as: :file %>
+    <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: '📷 Upload a photo' %>
 
-    <%= link_to 'Back', root_path, class: "btn btn-primary mt-3 mr-4" %>
+    <%= link_to 'Back', root_path, class: "btn new-button" %>
 
-    <%= f.submit class: "btn btn-primary mt-3" %>
+    <%= f.submit class: "btn new-button" %>
   <% end %>
 
 </div>
