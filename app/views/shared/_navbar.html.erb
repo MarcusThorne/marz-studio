@@ -1,18 +1,24 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "Marz_studio.png" %>
+    <%= image_tag "marz-studio-logo.png" %>
   <% end %>
-  <form id="search-bar" class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-  </form>
-
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <% if user_signed_in? %>
+    <form id="search-bar" class="form-inline">
+      <% if @query.present? %>
+        <input name="query" class="form-control mr-sm-2" type="search" placeholder="<%= @query %>" aria-label="Search">
+        <input name="previous_query" type="hidden" value="<%= @query %>">
+      <% else %>
+        <input name="query" class="form-control mr-sm-2" type="search" aria-label="Search">
+      <% end %>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
@@ -31,6 +37,17 @@
       </ul>
     </div>
   <% else %>
+
+    <form id="search-bar" class="form-inline">
+      <% if @query.present? %>
+        <input name="query" class="form-control mr-sm-2" type="search" placeholder="<%= @query %>" aria-label="Search">
+        <input name="previous_query" type="hidden" value="<%= @query %>">
+      <% else %>
+        <input name="query" class="form-control mr-sm-2" type="search" aria-label="Search">
+      <% end %>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
     <div class="register-buttons">
       <%= link_to "Register", new_user_registration_path, class:"btn btn-primary" %>
       <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %>

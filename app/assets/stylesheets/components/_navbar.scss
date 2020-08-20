@@ -1,9 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #D2D1CF;
-  box-shadow: 2px 2px 4px 0px rgba(141, 141, 141, 0.4);
+  background: #FAFAFA;
   height: 96px;
   position: relative;
+  border-bottom: 2px solid black;
+  margin: 0 16px 0 16px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,24 +16,25 @@
 }
 
 #search-bar {
-  position: absolute;
-  top: 35px!important;
-  right: 370px!important;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly!important;
+  position: absolute;
+  right: 50%;
 }
 
-#search-bar > button {
-  width: 50%;
-  margin: 0;
+#search-bar button {
+  margin: -10px;
+  background-color: #E0E0E0;
+  color: grey;
+  border-color: transparent;
 }
 
-#search-bar > input {
-  width: 100%;
+#search-bar input {
   margin: 0;
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
 }
 
 .logo {
