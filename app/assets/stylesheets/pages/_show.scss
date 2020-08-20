@@ -1,55 +1,132 @@
-.main-header {
-  background-color: #CDCACC;
-  height: 80px;
-  border-color: gray;
-}
-
-
-.container1 {
+.showpage {
   background-color: #fff;
-  width: 100%;
-  height: 100vh;
+}
+.name-header {
+  // background-color: blue;
+  text-align: center;
+  padding: 30px;
+}
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+
 }
 
-.art-photo img {
-  width: 400px;
-  height: 500px;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 3px 3px;
-  margin-left: 60px;
-}
-
-.art-description {
-  height: 250px;
-  width: 500px;
-  border-style: solid;
-  border-width: 3px;
-  margin-top: 20px;
-  border-color: gray;
-}
-.art-info {
-  padding-left: 30px;
-  margin-bottom: 30px;
-}
-
-.right {
-  margin-top: 70px;
-  margin-left: 70px;
-}
-.left {
+.details-container {
   margin-top: 30px;
 }
 
-#price-tag {
-  margin-top: 20px;
-  font-size: 20px;
+.description-div {
+  // background-color: ;
+  height: 250px;
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 80px;
+  font-style:italic;
+  font-size:120%;
+  padding: 10px;
+  position: relative;
 }
-button {
-  margin-left: 200px;
-  border-radius: 10px;
-  margin-top: 50px;
-  padding: 30px;
+
+.image {
+  width: 63%;
+  margin: 1%;
+
 }
+
+.buttons {
+  margin-left: 60px;
+  // background-color: #e5e5e5;
+  height: 60px;
+}
+
+.content-container {
+  background-color: #e5e5e5;
+  width: 32%;
+  margin: 1%;
+  height: 300px;
+}
+
+.likes-icon {
+  background-color: red;
+  height: 40px;
+  width: 620px;
+  margin-top: 30px;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 5px;
+}
+
+.shipping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+// .shipping-info {
+//   margin-left: 10px;
+// }
+
+
+
+
+// .main-header {
+//   background-color: #CDCACC;
+//   height: 80px;
+//   border-color: gray;
+// }
+
+
+// .container1 {
+//   background-color: #fff;
+//   width: 100%;
+//   height: 100vh;
+// }
+
+// .art-photo img {
+//   width: 400px;
+//   height: 500px;
+//   margin-top: 40px;
+//   border-radius: 10px;
+//   box-shadow: 3px 3px;
+//   margin-left: 60px;
+// }
+
+// .art-description {
+//   height: 250px;
+//   width: 500px;
+//   border-style: solid;
+//   border-width: 3px;
+//   margin-top: 20px;
+//   border-color: gray;
+// }
+// .art-info {
+//   padding-left: 30px;
+//   margin-bottom: 30px;
+// }
+
+// .right {
+//   margin-top: 70px;
+//   margin-left: 70px;
+// }
+// .left {
+//   margin-top: 30px;
+// }
+
+// #price-tag {
+//   margin-top: 20px;
+//   font-size: 20px;
+// }
+// button {
+//   margin-left: 200px;
+//   border-radius: 10px;
+//   margin-top: 50px;
+//   padding: 30px;
+// }
 
 
