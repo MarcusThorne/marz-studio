@@ -24,3 +24,36 @@ body {
   color: grey;
   font-family: 'Montserrat', sans-serif;
 }
+
+
+.line {
+  border: solid 2px rgb(61, 61, 61);
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.new-button {
+  border-radius: 12px;
+  background-color: white;
+  color: #707070;
+  border: 2px solid #707070;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 4px;
+}
+
+.hide-button {
+  border-radius: 12px;
+  background-color: white;
+  color: #707070;
+  margin-top: 32px;
+}
+
+.font-oswald{
+  font-family: 'Oswald', sans-serif;
+}
+
+.middle-button{
+  text-align: center;
+}
+

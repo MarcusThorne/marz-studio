@@ -1,4 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon font-oswald">
+
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "marz-studio-logo.png" %>
   <% end %>
@@ -48,8 +51,8 @@
     </form>
 
     <div class="register-buttons">
-      <%= link_to "Register", new_user_registration_path, class:"btn btn-primary" %>
-      <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %>
+      <%= link_to "Register", new_user_registration_path, class:"btn new-button" %>
+      <%= link_to "Sign In", new_user_session_path, class:"btn new-button" %>
     </div>
   <% end %>
 </div>

@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container full-page font-oswald">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h2>Log in</h2>
+      <h3 class="d-flex justify-content-center font-oswald mt-4">Sign In</h3>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -15,8 +15,8 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Log in" , class: 'btn btn-primary mb-4'%>
+        <div class="form-actions d-flex justify-content-center">
+          <%= f.button :submit, "Log in" , class:"btn new-button"%>
         </div>
       <% end %>
 
