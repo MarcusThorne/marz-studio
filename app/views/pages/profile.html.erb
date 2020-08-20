@@ -24,7 +24,9 @@
             <% else %>
               <% @arts.each do |art| %>
                 <div class="profile-card-product">
-                  <img src="<%= cl_image_path art.photo.key %>" />
+                  <% if art.photo.attached? %>
+                    <%= cl_image_tag art.photo.key %>
+                  <% end %>
                   <div class="profile-card-product-infos">
                     <h2>Product name: <%= art.name %></h2>
                     <p>Artist name: <%= art.artist %> </p>
@@ -43,7 +45,9 @@
             <div class="profile-cards">
               <% @arts_sell.each do |art| %>
                 <div class="profile-card-product">
-                  <img src="<%= cl_image_path art.photo.key %>" />
+                  <% if art.photo.attached? %>
+                    <%= cl_image_tag art.photo.key %>
+                  <% end %>
                   <div class="profile-card-product-infos">
                     <h2>Product name: <%= art.name %></h2>
                     <p>Artist name: <%= art.artist %> </p>
