@@ -1,5 +1,5 @@
 .arts-cards {
-  margin: 0 60px;
+  margin: 0 100px;
   border: transparent;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -11,13 +11,18 @@
   color: black;
 }
 
+.content .price {
+  font-size: 32px;
+}
+
 .art-card {
   background-color: transparent;
-  box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
   width: calc(100% - 100px);
   margin: 50px;
-  height: 450px;
+  min-height: 400px;
   border-radius: 4px;
+  position: relative;
 }
 
 #photo {
@@ -25,4 +30,24 @@
   width: 100%;
   object-fit: cover;
   border-radius: 4px 4px 0 0;
+}
+
+.card-content { 
+  margin: 6px;
+  font-size: 14px;
+}
+
+.line {
+  border: 1px solid black;
+}
+
+.art-card-price {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: rgba(255,255,255,0.7);
+  color: black;
+  font-size: 30px;
+  padding: 2px 16px 1px 16px;
+  border-radius: 4px;
 }
