@@ -4,19 +4,21 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/random')">
+  <div class="carousel-item active carousel-photo-1">
     <div class="carousel-inner-1">
-      <%= link_to "Art", arts_path %>
+      <%= link_to "Buy", arts_path, class: "carousel-text" %>
     </div>
   </div>
-  <div class="carousel-item" style="background-image: url('https://source.unsplash.com/user/erondu/1600x900')">
+  <div class="carousel-item carousel-photo-2 carousel-text">
     <div class="carousel-inner-1">
-      <%= link_to arts_path do  %>
-        <div class="btn btn-primary">Show me the Art</div>
-      <% end %>
+      <%= link_to "Sell", arts_path, class: "carousel-text" %>
     </div>
   </div>
-  <div class="carousel-item" style="background-image: url('https://source.unsplash.com/user/erondu/daily')">
+  <div class="carousel-item carousel-photo-3 carousel-text">
+    <div class="carousel-inner-1">
+            <%= link_to "Get Lucky", art_path(@art), class: "carousel-text" %>
+        </div>
+    </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -28,61 +30,3 @@
   </a>
 </div>
 
-
-
-<%# #arts.each here ////////////////////// %>
-
-
-<div id="home-container">
-  <div class="container row mt-5">
-    <h2></h2>
-    <div id="home-cards" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$0 - $100</h5>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-    <div id="home-cards" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$100 - $500</h5>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-    <div id="home-cards" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$500 - $1,000</h5>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-    <div id="home-cards" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$1,000 - $2,000</h5>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-    <div id="home-cards" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$2,000 - $5,000</h5>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-    <div id="home-cards" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$5,000 and above</h5>
-        <%= link_to arts_path do  %>
-            <div class="btn btn-primary">Show me the Art</div>
-          <% end %>
-      </div>
-    </div>
-  </div>
-</div>

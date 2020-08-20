@@ -1,78 +1,64 @@
-<h2 class="m-4" style="text-align:center">Profile History</h2>
+<div class="container">
+  <div class="row">
 
-<div class="card mb-4">
+    <div class="col-12 col-lg-4">
+      <h2 class="m-4" style="text-align:center">Profile History</h2>
+      <div class="card mb-4">
 
-  <% if current_user.photo.attached? %>
-    <img src="<%= cl_image_path current_user.photo.key %>" alt="profile pic" style="width:100%" class="mb-4">
-  <% else %>
-    <img src="https://www.kindpng.com/picc/m/22-223930_avatar-person-neutral-man-blank-face-buddy-facebook.png" alt="profile pic" style="width:100%" class="mb-4">
-  <% end %>
+        <% if current_user.photo.attached? %>
+          <img src="<%= cl_image_path current_user.photo.key %>" alt="profile pic" style="width:100%" class="mb-4">
+        <% else %>
+          <img src="https://www.kindpng.com/picc/m/22-223930_avatar-person-neutral-man-blank-face-buddy-facebook.png" alt="profile pic" style="width:100%" class="mb-4">
+        <% end %>
 
-  <%= link_to "Sell art", new_art_path, class:"btn btn-primary" %>
-</div>
+        <%= link_to "Sell your art", new_art_path, class:"btn btn-primary" %>
+      </div>
+    </div>
 
-<div class="container mb-4">
-  <div class="profile-purchase">
-    <h4>Purchase History</h4>
-    <% if @arts.count == 0 %>
-      <h5> You haven't purchased anything yet! </h5>
-      <% else %>
-        <div class="profile-cards">
-          <% @arts.each do |art| %>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="<%= cl_image_path art.photo.key %>" alt="Avatar" style="width:300px; height: 200px">
+    <div class="col-12 col-lg-8">
+      <div class="mt-5 mb-4">
+        <div class="profile-purchase mb-4">
+          <h4>Purchase History</h4>
+          <% if @arts.count == 0 %>
+              <h5> You haven't purchased anything yet! </h5>
+            <% else %>
+              <% @arts.each do |art| %>
+                <div class="profile-card-product">
+                  <img src="<%= cl_image_path art.photo.key %>" />
+                  <div class="profile-card-product-infos">
+                    <h2>Product name: <%= art.name %></h2>
+                    <p>Artist name: <%= art.artist %> </p>
+                    <p><strong>£ <%= art.price %></strong></p>
+                  </div>
                 </div>
-                <div class="flip-card-back">
-                  <h3> <%= art.name %> </h3>
-                  <h5> <%= art.artist %> </h5>
-                  <h5> £ <%= art.price %> </h5>
+              <% end %>
+            <% end %>
+          </div>
+
+        <div class="profile-sell">
+          <h4>Listing Item</h4>
+          <% if @arts_sell.count == 0 %>
+            <h5> You haven't listed anything for sale yet! </h5>
+          <% else %>
+            <div class="profile-cards">
+              <% @arts_sell.each do |art| %>
+                <div class="profile-card-product">
+                  <img src="<%= cl_image_path art.photo.key %>" />
+                  <div class="profile-card-product-infos">
+                    <h2>Product name: <%= art.name %></h2>
+                    <p>Artist name: <%= art.artist %> </p>
+                    <p><strong>£ <%= art.price %></strong></p>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             </div>
           <% end %>
         </div>
       </div>
-    <% end %>
+    </div>
 
-  <div class="profile-sell">
-    <h4>Listing Item</h4>
-    <% if @arts_sell.count == 0 %>
-      <h5> You haven't listed anything for sale yet! </h5>
-      <% else %>
-        <div class="profile-cards">
-          <% @arts_sell.each do |art| %>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="<%= cl_image_path art.photo.key %>" alt="Avatar" style="width:300px; height: 200px">
-                </div>
-                <div class="flip-card-back">
-                <h3> <%= art.name %> </h3>
-                <h5> <%= art.artist %> </h5>
-                <h5> £ <%= art.price %> </h5>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
