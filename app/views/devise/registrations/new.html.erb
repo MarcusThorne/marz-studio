@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container full-page font-oswald">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h2>Sign up</h2>
+      <h3 class="d-flex justify-content-center font-oswald mt-4">Register</h3>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
@@ -19,11 +19,12 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
 
-          <%= f.input :photo, as: :file, required: true %>
+
+          <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: '📷 Upload a photo' %>
         </div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: 'btn btn-primary mb-4'%>
+        <div class="form-actions d-flex justify-content-center">
+          <%= f.button :submit, "Sign up", class:"btn new-button"%>
         </div>
       <% end %>
 
