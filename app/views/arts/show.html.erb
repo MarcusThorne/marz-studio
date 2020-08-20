@@ -34,7 +34,7 @@
       </div>
       <div class="buttons d-flex">
           <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary ml-5 mt-4" %></p>
-          <p><a class="btn btn-warning mt-4 ml-2">Back</a></p>
+          <p><a class="btn btn-warning mt-4 ml-2"><%= link_to 'Back', arts_path(@arts) %></a></p>
       </div>
       <div class="shipping d-flex mt-2">
         <p id="shipping-info"><i class="fas fa-check"></i></p>
