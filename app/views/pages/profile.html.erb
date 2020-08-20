@@ -8,7 +8,7 @@
         <% if current_user.photo.attached? %>
           <img src="<%= cl_image_path current_user.photo.key %>" alt="profile pic" style="width:100%" class="mb-4">
         <% else %>
-          <img src="https://www.kindpng.com/picc/m/22-223930_avatar-person-neutral-man-blank-face-buddy-facebook.png" alt="profile pic" style="width:100%" class="mb-4">
+          <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="profile pic" style="width:100%">
         <% end %>
 
         <%= link_to "Sell your art", new_art_path, class:"btn btn-primary" %>
@@ -36,7 +36,7 @@
           </div>
 
         <div class="profile-sell">
-          <h4>Listing Item</h4>
+          <h4>Listing Items</h4>
           <% if @arts_sell.count == 0 %>
             <h5> You haven't listed anything for sale yet! </h5>
           <% else %>
@@ -56,7 +56,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
