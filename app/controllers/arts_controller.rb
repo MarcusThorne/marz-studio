@@ -1,6 +1,14 @@
 class ArtsController < ApplicationController
   def index
-    @arts = Art.all
+    if params[:query].present?
+      @arts = Art.search_by_title_and_artist(params[:query])
+      @query = params[:query]
+      # if params[:query] == params[:previous_query]
+      #   redirect_to arts_path
+      # end
+    else
+      @arts = Art.all
+    end
   end
 
   def show

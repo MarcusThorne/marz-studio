@@ -10,7 +10,7 @@
 @import "footer";
 
 body {
-  background-color: #D2D1CF;
+  background-color: white;
 }
 
 #filter-search-bar {
@@ -20,10 +20,13 @@ body {
 
 #page-info {
   margin: 32px;
+  margin-top: 32px;
+  color: grey;
 }
 
-#line {
-  border: solid 2px black;
-  width: 900px;
-  margin: 24px;
+.line {
+  border: solid 2px rgb(61, 61, 61);
+  width: 100px;
+  margin: 0;
+  padding: 0;
 }
