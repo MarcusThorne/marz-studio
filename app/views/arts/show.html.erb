@@ -1,56 +1,63 @@
-  <!-- <div class="main-header">
-  <nav class="navigation ">
-    <ul class="list d-flex justify-content-center pt-5">
-      <li id="ctl00">
-        <a class=" nav-item p-4" href="/galleries/lisson-gallery/">Home</a>
-      </li>
-      <li id="ctl00">
-        <a class="nav-item active p-4" href="/galleries/lisson-gallery/artworks/">Index</a>
-      </li>
-      <li id="ctl00">
-        <a class=" nav-item p-4" href="/galleries/lisson-gallery/artists/">Show</a>
-      </li>
-      <li id="ctl00">
-        <a class=" nav-item p-4" href="/galleries/lisson-gallery/exhibitions/">Purchases</a>
-      </li>
-      <li id="ctl00">
-        <a class=" nav-item p-4" href="/galleries/lisson-gallery/art-fairs/"></a>
-      </li>
-    </ul>
-  </nav>
-</div> -->
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-6">
+       <%= cl_image_tag @art.photo.key, class: "w-100" %>
+    </div>
+    <div class="col-6">
+      <div class="bg-light p-3">
+        <h1><strong><%= @art.name %></strong></h1>
+        <ul class="un-list">
+        <li class="p-3 links"><strong><i class="fas fa-user"></i> : </strong><%= @art.artist %></li>
+        <li class="p-3 links"><strong><i class="fas fa-location-arrow"></i> : </strong><%= "London" %></li>
+        <li class="p-3 links"><strong><i class="fas fa-pound-sign"></i> : </strong><%= @art.price %></li>
+        <li class="p-3 links"><strong><i class="fas fa-paint-brush"></i> : </strong><span><%= @art.style %></span></li>
+        <li class="p-3 links"><strong><i class="fas fa-truck-pickup"></i> : </strong><span>39.4 W x 59.1 H x 0.8 in</span></li>
+      </ul>
 
-<div class="container1">
-
-    <div class="wrapper d-flex">
-
-    <div class="left">
-      <div class="art-photo">
-    <% if @art.photo.attached? %>
-      <div class="image"><%= cl_image_tag @art.photo.key %></div>
-    <% else %>
-      url('https://images.unsplash.com/photo-1497990902153-c6d041aad676?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1107&q=80')
-    <% end %>
+      <div class="buttons d-flex">
+          <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary ml-5 mt-4" %></p>
+          <p><%= link_to 'Back', arts_path(@arts), class: "btn btn-warning mt-4 ml-3" %></a></p>
+      </div>
+      <div class="d-flex shopping-info">
+        <p><i class="fas fa-check"></i></p>
+        <p>Shipping included</p>
       </div>
     </div>
-    <div class="right">
-      <div class="button d-flex">
-      <!-- <h1><%= @art.artist %></h1> -->
-      <h1><%=@art.name %></h1>
-      <%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary ml-4" %>
+
+
+      <div class="description bg-light p-3 mt-4">
+        <%= @art.description %>
     </div>
 
-      <div class="art-info">
-        <p id="price-tag">Price:  £<%= @art.price %></p>
-         <%#= @art.name %>
-        <p id="price-tag">Style:  <%= @art.style %></p>
-      </div>
-      <div class="art-description">
-         <%= @art.description %>
-      </div>
     </div>
+
   </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
