@@ -1,6 +1,6 @@
-<h2 class="m-4" style="text-align:center">About me</h2>
+<h2 class="m-4" style="text-align:center">Profile History</h2>
 
-<div class="card">
+<div class="card mb-4">
 
   <% if current_user.photo.attached? %>
     <img src="<%= cl_image_path current_user.photo.key %>" alt="profile pic" style="width:100%" class="mb-4">
@@ -8,17 +8,75 @@
     <img src="https://www.kindpng.com/picc/m/22-223930_avatar-person-neutral-man-blank-face-buddy-facebook.png" alt="profile pic" style="width:100%" class="mb-4">
   <% end %>
 
-  <h2>Purchase History</h2>
-  <p>------------------</p>
-
-  <% @arts.each do |art| %>
-    <h3> <%= art.name %> </h3>
-    <h5> <%= art.artist %> </h5>
-    <h5> £ <%= art.price %> </h5>
-    <img src="<%= cl_image_path art.photo.key %>" alt="profile pic" style="width:100%" class="mb-4">
-  <% end %>
-
-<%= link_to "Sell art", new_art_path, class:"btn btn-primary" %>
-
+  <%= link_to "Sell art", new_art_path, class:"btn btn-primary" %>
 </div>
+
+<div class="container mb-4">
+  <div class="profile-purchase">
+    <h4>Purchase History</h4>
+    <% if @arts.count == 0 %>
+      <h5> You haven't purchased anything yet! </h5>
+      <% else %>
+        <div class="profile-cards">
+          <% @arts.each do |art| %>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="<%= cl_image_path art.photo.key %>" alt="Avatar" style="width:300px; height: 200px">
+                </div>
+                <div class="flip-card-back">
+                  <h3> <%= art.name %> </h3>
+                  <h5> <%= art.artist %> </h5>
+                  <h5> £ <%= art.price %> </h5>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+  <div class="profile-sell">
+    <h4>Listing Item</h4>
+    <% if @arts_sell.count == 0 %>
+      <h5> You haven't listed anything for sale yet! </h5>
+      <% else %>
+        <div class="profile-cards">
+          <% @arts_sell.each do |art| %>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="<%= cl_image_path art.photo.key %>" alt="Avatar" style="width:300px; height: 200px">
+                </div>
+                <div class="flip-card-back">
+                <h3> <%= art.name %> </h3>
+                <h5> <%= art.artist %> </h5>
+                <h5> £ <%= art.price %> </h5>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
