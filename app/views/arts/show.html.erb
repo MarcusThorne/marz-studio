@@ -1,39 +1,44 @@
 <div class="container pt-5">
   <div class="row">
-    <div class="col-6">
-       <%= cl_image_tag @art.photo.key, class: "w-100" %>
-    </div>
-    <div class="col-6">
-      <div class="bg-light p-3">
-        <h1><strong><%= @art.name %></strong></h1>
-        <ul class="un-list">
-        <li class="p-3 links"><strong><i class="fas fa-user"></i> : </strong><%= @art.artist %></li>
-        <li class="p-3 links"><strong><i class="fas fa-location-arrow"></i> : </strong><%= "London" %></li>
-        <li class="p-3 links"><strong><i class="fas fa-pound-sign"></i> : </strong><%= @art.price %></li>
-        <li class="p-3 links"><strong><i class="fas fa-paint-brush"></i> : </strong><span><%= @art.style %></span></li>
-        <li class="p-3 links"><strong><i class="fas fa-truck-pickup"></i> : </strong><span>39.4 W x 59.1 H x 0.8 in</span></li>
-      </ul>
-
-      <div class="buttons d-flex">
-          <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary ml-5 mt-4" %></p>
-          <p><%= link_to 'Back', arts_path(@arts), class: "btn btn-warning mt-4 ml-3" %></a></p>
+      <div class="col-6">
+        <%= cl_image_tag @art.photo.key, class: "w-100" %>
       </div>
-      <div class="d-flex shopping-info">
-        <p><i class="fas fa-check"></i></p>
-        <p>Shipping included</p>
+      <div class="col-6">
+        <div class="bg-light p-3 contents w-75 h-50">
+            <h1 class="p-3 art-name"><strong><%= @art.name %></strong></h1>
+              <ul class="un-list">
+              <li class="p-1 links"><strong><i class="fas fa-user"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= @art.artist %></li>
+              <li class="p-1 links"><strong><i class="fas fa-location-arrow"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= "London" %></li>
+              <li class="p-1 links"><strong><i class="fas fa-pound-sign"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= @art.price %></li>
+              <li class="p-1 links"><strong><i class="fas fa-paint-brush"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span><%= @art.style %></span></li>
+              <li class="p-1 links"><strong><i class="fas fa-truck-pickup"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>39.4 W x 59.1 H x 0.8 in</span></li>
+              </ul>
+            <div class="buttons d-flex justify-content-center">
+               <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary mt-4 p-2" %></p>
+               <p><%= link_to 'Back', arts_path(@arts), class: "btn btn-warning mt-4 ml-3 p-2" %></a></p>
+            </div>
+            <div class="d-flex shopping-info justify-content-center">
+                <p><i class="fas fa-check"></i></p>
+                <p id="shopping-info">Shipping included</p>
+            </div>
+        </div>
+          <div class="description bg-light p-3 mt-4">
+           <p class="pt-4"><%= @art.description %></p>
+          </div>
       </div>
     </div>
 
-
-      <div class="description bg-light p-3 mt-4">
-        <%= @art.description %>
+    <div class="bg-light mt-5 quotes">
+        <blockquote class="blockquote text-right">
+        <p class="mb-0">Art is not what you see,but what you make others see.</p>
+        <footer class="blockquote-footer"><cite title="Source Title">EDGAR DEGAS</cite></footer>
+        </blockquote>
     </div>
-
-    </div>
-
-  </div>
-
 </div>
+
+
+
+
 
 
 
