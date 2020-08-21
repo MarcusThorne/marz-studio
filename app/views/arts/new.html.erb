@@ -6,9 +6,9 @@
     <%= f.input :artist %>
 
     <div style="display: flex; justify-content: space-between;">
-      <%= f.input :category, collection: Art.categories %>
-      <%= f.input :style, collection: Art.styles %>
-      <%= f.input :subject, collection: Art.subjects %>
+      <%= f.input :category, collection: Art.categories.keys %>
+      <%= f.input :style, collection: Art.styles.keys %>
+      <%= f.input :subject, collection: Art.subjects.keys %>
     </div>
 
     <%= f.input :price %>
