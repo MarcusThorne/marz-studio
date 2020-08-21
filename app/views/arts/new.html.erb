@@ -16,11 +16,17 @@
 
     <%= f.input :description %>
 
-    <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: '📷 Upload a photo' %>
+    <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: "📷 <span class='ml-2'>Upload A Photo</span>".html_safe %>
 
-    <%= link_to 'Back', root_path, class: "btn new-button" %>
 
-    <%= f.submit class: "btn new-button" %>
+    <div class="fr">
+      <%= f.submit class: "btn new-button" %>
+    </div>
+
+    <div class="fr">
+      <%= link_to 'Back', root_path, class: "btn hide-button middle-button" %>
+    </div>
+
   <% end %>
 
 </div>

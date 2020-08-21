@@ -20,7 +20,7 @@
                       input_html: { autocomplete: "new-password" } %>
 
 
-          <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: '📷 Upload a photo' %>
+          <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: "📷 <span class='ml-2'>Upload A Photo</span>".html_safe %>
         </div>
 
         <div class="form-actions d-flex justify-content-center">
@@ -32,3 +32,4 @@
     </div>
   </div>
 </div>
+
