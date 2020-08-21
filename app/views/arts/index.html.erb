@@ -6,7 +6,7 @@
     <div>
       <div id="page-info">
         <h2 style="font-family: 'Montserrat', sans-serif; color: #424242;"><strong>View our Gallery</strong></h2>
-        <p>MARZ studio is an art gallery specialising in original contemporary and classical art for sale <br> including paintings and photographs. We are delighted to occasionally host private viewing <br> and special exhibitions. If you like the website feel free to give us a star <a href="https://github.com/MarcusThorne/MARZ_studio">here</a>.</p>
+        <p>MARZ studio is an art gallery specialising in original contemporary and classical art for sale <br> including paintings and photographs. We are delighted to occasionally host private viewing <br> and special exhibitions. If you like the website feel free to give us a star <a href="https://github.com/MarcusThorne/MARZ_studio" target="blank">here</a>.</p>
       </div>
       
       <div style="display: flex">
@@ -24,7 +24,7 @@
                 <% end %>
               
                 <div class="art-card-price">
-                  £<%= art.price %>
+                 £<%= number_with_delimiter( art.price , delimiter: ",") %>
                 </div>
 
                 <div class="card-content" style="display:flex; justify-content:space-between;">

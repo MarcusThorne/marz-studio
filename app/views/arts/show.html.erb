@@ -1,7 +1,9 @@
 <div class="container pt-5">
   <div class="row">
       <div class="image col-6">
-        <%= cl_image_tag @art.photo.key, class: "w-100" %>
+        <% if @art.photo.attached? %>
+          <%= cl_image_tag @art.photo.key, class: "w-100" %>
+        <% end %>
       </div>
       <div class="col-6">
         <div class="bg-light p-3 contents w-75 h-50">

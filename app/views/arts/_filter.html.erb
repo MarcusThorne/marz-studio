@@ -1,262 +1,483 @@
 <form id="filter" style="display: flex; flex-direction: column;">
-            <% if filter.present? %>
-              
-              <h4 class="title">Style</h4>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="abstract" value="abstract">
-                <label for="abstract">Abstract</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="fine-art" value="fine art" >
-                <label for="fine-art">Fine Art</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="modern" value="modern">
-                <label for="modern">Modern</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="figurative" value="figurative" >
-                <label for="figurative">Figurative</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="abstract-expressionism" value="abstract expressionism" >
-                <label for="abstract-expressionism">Abstract Expressionism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="expressionism" value="expressionism" >
-                <label for="expressionism">Expressionism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="realism" value="realism" >
-                <label for="realism">Realism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="conceptual" value="conceptual" >
-                <label for="conceptual">Conceptual</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name=`"filter" type="checkbox" id="impressionism" value="impressionism" >
-                <label for="impressionism">Impressionism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="surrealism" value="surrealism" >
-                <label for="surrealism">Surrealism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="portraiture" value="portraiture" >
-                <label for="portraiture">Portraiture</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="pop-art" value="pop-art" >
-                <label for="pop-art">Pop-art</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="minimalism" value="minimalism" >
-                <label for="minimalism">Minimalism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="illustration" value="illustration" >
-                <label for="illustration">Illustration</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="street-art" value="street-art" >
-                <label for="street-art">Street-art</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="documentary" value="documentary" >
-                <label for="documentary">Documentary</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="art-deco" value="art-deco" >
-                <label for="art-deco">Art-deco</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="photorealism" value="photorealism" >
-                <label for="photorealism">Photorealism</label>
-              </div>
-              <div class="filter-content  style="display: flex;">
-                <input name="filter" type="checkbox" id="folk" value="folk" >
-                <label for="folk">Folk</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="cubism" value="cubism" >
-                <label for="cubism">Cubism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="dada" value="dada" >
-                <label for="dada">Dada</label>
-              </div>
-            
-            <% else %>
-              
-              <h4 class="title">Style</h4>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="abstract" value="abstract">
-                <label for="abstract">Abstract</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="fine-art" value="fine art" >
-                <label for="fine-art">Fine Art</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="modern" value="modern">
-                <label for="modern">Modern</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="figurative" value="figurative" >
-                <label for="figurative">Figurative</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="abstract-expressionism" value="abstract expressionism" >
-                <label for="abstract-expressionism">Abstract Expressionism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="expressionism" value="expressionism" >
-                <label for="expressionism">Expressionism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="realism" value="realism" >
-                <label for="realism">Realism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="conceptual" value="conceptual" >
-                <label for="conceptual">Conceptual</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name=`"filter" type="checkbox" id="impressionism" value="impressionism" >
-                <label for="impressionism">Impressionism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="surrealism" value="surrealism" >
-                <label for="surrealism">Surrealism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="portraiture" value="portraiture" >
-                <label for="portraiture">Portraiture</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="pop-art" value="pop-art" >
-                <label for="pop-art">Pop-art</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="minimalism" value="minimalism" >
-                <label for="minimalism">Minimalism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="illustration" value="illustration" >
-                <label for="illustration">Illustration</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="street-art" value="street-art" >
-                <label for="street-art">Street-art</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="documentary" value="documentary" >
-                <label for="documentary">Documentary</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="art-deco" value="art-deco" >
-                <label for="art-deco">Art-deco</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="photorealism" value="photorealism" >
-                <label for="photorealism">Photorealism</label>
-              </div>
-              <div class="filter-content  style="display: flex;">
-                <input name="filter" type="checkbox" id="folk" value="folk" >
-                <label for="folk">Folk</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="cubism" value="cubism" >
-                <label for="cubism">Cubism</label>
-              </div>
-              <div class="filter-content style="display: flex;">
-                <input name="filter" type="checkbox" id="dada" value="dada" >
-                <label for="dada">Dada</label>
-              </div>
-            
-            <% end %>
-            
-            <div style="border: 0.1px solid rgb(236, 236, 236); margin: 8px 0; width: 90%"></div>
+      <% if filter.present? %>
+        <h4 class="title">Style</h4>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="abstract" value="abstract">
+          <label for="abstract">Abstract</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="fine-art" value="fine art" >
+          <label for="fine-art">Fine Art</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="modern" value="modern">
+          <label for="modern">Modern</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="figurative" value="figurative" >
+          <label for="figurative">Figurative</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="abstract-expressionism" value="abstract expressionism" >
+          <label for="abstract-expressionism">Abstract Expressionism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="expressionism" value="expressionism" >
+          <label for="expressionism">Expressionism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="realism" value="realism" >
+          <label for="realism">Realism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="conceptual" value="conceptual" >
+          <label for="conceptual">Conceptual</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name=`"filter" type="checkbox" id="impressionism" value="impressionism" >
+          <label for="impressionism">Impressionism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="surrealism" value="surrealism" >
+          <label for="surrealism">Surrealism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="portraiture" value="portraiture" >
+          <label for="portraiture">Portraiture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="pop-art" value="pop-art" >
+          <label for="pop-art">Pop-art</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="minimalism" value="minimalism" >
+          <label for="minimalism">Minimalism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="illustration" value="illustration" >
+          <label for="illustration">Illustration</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="street-art" value="street-art" >
+          <label for="street-art">Street-art</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="documentary" value="documentary" >
+          <label for="documentary">Documentary</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="art-deco" value="art-deco" >
+          <label for="art-deco">Art-deco</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="photorealism" value="photorealism" >
+          <label for="photorealism">Photorealism</label>
+        </div>
+        <div class="filter-content  style="display: flex;">
+          <input name="filter" type="checkbox" id="folk" value="folk" >
+          <label for="folk">Folk</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="cubism" value="cubism" >
+          <label for="cubism">Cubism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="dada" value="dada" >
+          <label for="dada">Dada</label>
+        </div>
+      
+      <% else %>
+        
+        <h4 class="title">Style</h4>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="abstract" value="abstract">
+          <label for="abstract">Abstract</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="fine-art" value="fine art" >
+          <label for="fine-art">Fine Art</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="modern" value="modern">
+          <label for="modern">Modern</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="figurative" value="figurative" >
+          <label for="figurative">Figurative</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="abstract-expressionism" value="abstract expressionism" >
+          <label for="abstract-expressionism">Abstract Expressionism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="expressionism" value="expressionism" >
+          <label for="expressionism">Expressionism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="realism" value="realism" >
+          <label for="realism">Realism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="conceptual" value="conceptual" >
+          <label for="conceptual">Conceptual</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name=`"filter" type="checkbox" id="impressionism" value="impressionism" >
+          <label for="impressionism">Impressionism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="surrealism" value="surrealism" >
+          <label for="surrealism">Surrealism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="portraiture" value="portraiture" >
+          <label for="portraiture">Portraiture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="pop-art" value="pop-art" >
+          <label for="pop-art">Pop-art</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="minimalism" value="minimalism" >
+          <label for="minimalism">Minimalism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="illustration" value="illustration" >
+          <label for="illustration">Illustration</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="street-art" value="street-art" >
+          <label for="street-art">Street-art</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="documentary" value="documentary" >
+          <label for="documentary">Documentary</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="art-deco" value="art-deco" >
+          <label for="art-deco">Art-deco</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="photorealism" value="photorealism" >
+          <label for="photorealism">Photorealism</label>
+        </div>
+        <div class="filter-content  style="display: flex;">
+          <input name="filter" type="checkbox" id="folk" value="folk" >
+          <label for="folk">Folk</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="cubism" value="cubism" >
+          <label for="cubism">Cubism</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="dada" value="dada" >
+          <label for="dada">Dada</label>
+        </div>
+      <% end %>
+                
+      <div style="border: 0.1px solid rgb(236, 236, 236); margin: 8px 0; width: 90%"></div>
 
-            <div class="category" style="margin-top: 16px;">
-              <% if filter.present? %>
-                <h4 class="title">Category</h4>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="paintings" value="paintings">
-                    <label for="paintings">Paintings</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="photography" value="photography" >
-                    <label for="photogrpahy">Photogrpahy</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="drawings" value="drawings">
-                    <label for="drawings">Drawings</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="new-media" value="new media" >
-                    <label for="new-media">New Media</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="sculpture" value="sculpture" >
-                    <label for="sculpture">Sculpture</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="collage" value="collage" >
-                    <label for="collage">Collage</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="printmaking" value="printmaking" >
-                    <label for="printmaking">Printmaking</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="installation" value="installation" >
-                    <label for="installation">Installation</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name=`"filter" type="checkbox" id="video" value="video" >
-                    <label for="video">Video</label>
-                  </div>
+      <div class="category" style="margin-top: 16px;">
+      <% if filter.present? %>
+        <h4 class="title">Subject</h4>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="abstract" value="abstract">
+          <label for="abstract">Abstract</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="landscape" value="Landscape" >
+          <label for="landscape">Landscape</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="people" value="people">
+          <label for="people">People</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="portrait" value="portrait" >
+          <label for="portrait">Portrait</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="nature" value="nature" >
+          <label for="nature">Nature</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="animal" value="animal" >
+          <label for="animal">Animal</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="women" value="women" >
+          <label for="women">Women</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="floral" value="floral" >
+          <label for="floral">Floral</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name=`"filter" type="checkbox" id="still_life" value="still life" >
+          <label for="still_life">Stil Life</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="nude" value="nude" >
+          <label for="nude">Nude</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="fantasy" value="fantasy" >
+          <label for="fantasy">Fantasy</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="architecture" value="architecture" >
+          <label for="architecture">Architecture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="seascape" value="seascape" >
+          <label for="seascape">Seascape</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="cities" value="cities" >
+          <label for="cities">Cities</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="body" value="body" >
+          <label for="body">Body</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="love" value="love" >
+          <label for="love">Love</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="botanic" value="botanic" >
+          <label for="botanic">Botanic</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="world-culture" value="world-culture" >
+          <label for="world-culture">World Culture</label>
+        </div>
+        <div class="filter-content  style="display: flex;">
+          <input name="filter" type="checkbox" id="beach" value="beach" >
+          <label for="beach">Beach</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="culture" value="culture" >
+          <label for="culture">Culture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="geometric" value="geometric" >
+          <label for="geometric">Geometric</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="pop_culture" value="pop culture" >
+          <label for="pop_culture">Pop Culture</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="erotic" value="erotic" >
+          <label for="erotic">Erotic</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="places" value="places" >
+          <label for="places">Places</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="religious" value="religious" >
+          <label for="religious">Religious</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="music" value="music" >
+          <label for="music">Music</label>
+        </div>
+
+      <% else %>
+        
+        <h4 class="title">Subject</h4>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="abstract" value="abstract">
+          <label for="abstract">Abstract</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="landscape" value="Landscape" >
+          <label for="landscape">Landscape</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="people" value="people">
+          <label for="people">People</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="portrait" value="portrait" >
+          <label for="portrait">Portrait</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="nature" value="nature" >
+          <label for="nature">Nature</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="animal" value="animal" >
+          <label for="animal">Animal</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="women" value="women" >
+          <label for="women">Women</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="floral" value="floral" >
+          <label for="floral">Floral</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name=`"filter" type="checkbox" id="still_life" value="still life" >
+          <label for="still_life">Stil Life</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="nude" value="nude" >
+          <label for="nude">Nude</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="fantasy" value="fantasy" >
+          <label for="fantasy">Fantasy</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="architecture" value="architecture" >
+          <label for="architecture">Architecture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="seascape" value="seascape" >
+          <label for="seascape">Seascape</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="cities" value="cities" >
+          <label for="cities">Cities</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="body" value="body" >
+          <label for="body">Body</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="love" value="love" >
+          <label for="love">Love</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="botanic" value="botanic" >
+          <label for="botanic">Botanic</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="world-culture" value="world-culture" >
+          <label for="world-culture">World Culture</label>
+        </div>
+        <div class="filter-content  style="display: flex;">
+          <input name="filter" type="checkbox" id="beach" value="beach" >
+          <label for="beach">Beach</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="culture" value="culture" >
+          <label for="culture">Culture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="geometric" value="geometric" >
+          <label for="geometric">Geometric</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="pop_culture" value="pop culture" >
+          <label for="pop_culture">Pop Culture</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="erotic" value="erotic" >
+          <label for="erotic">Erotic</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="places" value="places" >
+          <label for="places">Places</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="religious" value="religious" >
+          <label for="religious">Religious</label>
+        </div>
+          <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="music" value="music" >
+          <label for="music">Music</label>
+        </div>
+
+      <% end %>
                   
-                <% else %>
-                  
-                  <h4 class="title">Category</h4>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="paintings" value="paintings">
-                    <label for="paintings">Paintings</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="photography" value="photography" >
-                    <label for="photogrpahy">Photogrpahy</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="drawings" value="drawings">
-                    <label for="drawings">Drawings</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="new-media" value="new media" >
-                    <label for="new-media">New Media</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="sculpture" value="sculpture" >
-                    <label for="sculpture">Sculpture</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="collage" value="collage" >
-                    <label for="collage">Collage</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="printmaking" value="printmaking" >
-                    <label for="printmaking">Printmaking</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name="filter" type="checkbox" id="installation" value="installation" >
-                    <label for="installation">Installation</label>
-                  </div>
-                  <div class="filter-content style="display: flex;">
-                    <input name=`"filter" type="checkbox" id="video" value="video" >
-                    <label for="video">Video</label>
-                  </div>
-                <% end %>
-              </div>
+      <div style="border: 0.1px solid rgb(236, 236, 236); margin: 8px 0; width: 90%"></div>
+
+      <div class="category" style="margin-top: 16px;">
+      <% if filter.present? %>
+        <h4 class="title">Category</h4>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="paintings" value="paintings">
+          <label for="paintings">Paintings</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="photography" value="photography" >
+          <label for="photogrpahy">Photogrpahy</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="drawings" value="drawings">
+          <label for="drawings">Drawings</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="new-media" value="new media" >
+          <label for="new-media">New Media</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="sculpture" value="sculpture" >
+          <label for="sculpture">Sculpture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="collage" value="collage" >
+          <label for="collage">Collage</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="printmaking" value="printmaking" >
+          <label for="printmaking">Printmaking</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="installation" value="installation" >
+          <label for="installation">Installation</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name=`"filter" type="checkbox" id="video" value="video" >
+          <label for="video">Video</label>
+        </div>
+        
+      <% else %>
+        
+        <h4 class="title">Category</h4>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="paintings" value="paintings">
+          <label for="paintings">Paintings</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="photography" value="photography" >
+          <label for="photogrpahy">Photogrpahy</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="drawings" value="drawings">
+          <label for="drawings">Drawings</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="new-media" value="new media" >
+          <label for="new-media">New Media</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="sculpture" value="sculpture" >
+          <label for="sculpture">Sculpture</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="collage" value="collage" >
+          <label for="collage">Collage</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="printmaking" value="printmaking" >
+          <label for="printmaking">Printmaking</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name="filter" type="checkbox" id="installation" value="installation" >
+          <label for="installation">Installation</label>
+        </div>
+        <div class="filter-content style="display: flex;">
+          <input name=`"filter" type="checkbox" id="video" value="video" >
+          <label for="video">Video</label>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <input style="margin: 16px 24px 16px 12px; border: none; color: grey; border-radius: 4px; " type="submit">
+</form>
