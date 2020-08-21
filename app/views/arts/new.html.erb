@@ -3,24 +3,26 @@
 
   <%= simple_form_for(@art) do |f| %>
     <%= f.input :name %>
-
     <%= f.input :artist %>
 
     <div style="display: flex; justify-content: space-between;">
-      <%= f.input :category %>
-      <%= f.input :style %>
-      <%= f.input :subject %>
+      <%= f.input :category, collection: Art.categories %>
+      <%= f.input :style, collection: Art.styles %>
+      <%= f.input :subject, collection: Art.subjects %>
     </div>
 
     <%= f.input :price %>
-
     <%= f.input :description %>
+    <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: "📷 <span class='ml-2'>Upload A Photo</span>".html_safe %>
 
-    <%= f.input :photo, as: :file, required: true, input_html: { class: 'd-none' }, label_html: { class: 'btn new-button'}, wrapper_html: { class: 'middle-button'}, label: '📷 Upload a photo' %>
+    <div class="fr">
+      <%= f.submit class: "btn new-button" %>
+    </div>
 
-    <%= link_to 'Back', root_path, class: "btn new-button" %>
+    <div class="fr">
+      <%= link_to 'Back', root_path, class: "btn hide-button middle-button" %>
+    </div>
 
-    <%= f.submit class: "btn new-button" %>
   <% end %>
 
 </div>

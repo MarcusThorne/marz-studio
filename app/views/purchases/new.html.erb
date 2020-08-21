@@ -1,17 +1,25 @@
-<h1><%= @art.name %></h1>
+<div class="container font-oswald full-page">
+<h3 class="d-flex justify-content-center font-oswald mt-4"><%= @art.name %></h3>
 
   <%= simple_form_for [@art, @purchase] do |f| %>
-    <div class="form" style="display: flex; flex-direction: column;">
+    <div class="form mt-1" style="display: flex; flex-direction: column;">
       <label for="">Card Holder Name</label>
-      <input name="purchase[card_holder_name]" type="Card Number" placeholder="Enter Card Number">
+      <input class="bottom-change" name="purchase[card_holder_name]" type="Card Number" placeholder="Card Holder Name">
       <label for="">Card Number</label>
-      <input name="purchase[card_number]" type="Card Number" placeholder="Enter Card Number">
+      <input class="bottom-change" name="purchase[card_number]" type="Card Number" placeholder="Enter Card Number">
       <label for="" >Expiration Date</label>
-      <input name="purchase[expiration_date]" type="Expiration" placeholder="MM / YY">
+      <input class="bottom-change" name="purchase[expiration_date]" type="Expiration" placeholder="MM / YY">
       <label for="" >Security Code (CVV)</label>
-      <input name="purchase[security_code]" type="Expiration" placeholder="XXX">
+      <input class="bottom-change" name="purchase[security_code]" type="Expiration" placeholder="XXX">
     </div>
-    <%= link_to 'Back', art_path(@art), class: "btn btn-primary mt-3 mr-4" %>
 
-    <%= f.button :submit, class: "btn new-button" %>
+    <div class="fr">
+      <%= f.button :submit, class: "btn new-button middle-button" %>
+    </div>
+
+    <div class="fr">
+      <%= link_to 'Back', art_path(@art), class: "btn hide-button middle-button" %>
+    </div>
+
   <% end %>
+</div>

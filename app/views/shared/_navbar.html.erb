@@ -13,7 +13,6 @@
     <form id="search-bar" class="form-inline">
       <% if @query.present? %>
         <input name="query" class="form-control mr-sm-2" type="search" placeholder="<%= @query %>" aria-label="Search">
-        <input name="previous_query" type="hidden" value="<%= @query %>">
       <% else %>
         <input name="query" class="form-control mr-sm-2" type="search" aria-label="Search" placeholder="Search by artist or title...">
       <% end %>
@@ -26,10 +25,10 @@
 
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <i class="drop-down-arrow fas fa-caret-down"></i>
+            <%# <i class="drop-down-arrow fas fa-caret-down"></i> %>
           <% else %>
             <%= image_tag "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <i class="drop-down-arrow fas fa-caret-down"></i>
+            <%# <i class="drop-down-arrow fas fa-caret-down"></i> %>
           <% end %>
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -45,13 +44,11 @@
     <form id="search-bar" class="form-inline">
       <% if @query.present? %>
         <input name="query" class="form-control mr-sm-2" type="search" placeholder="<%= @query %>" aria-label="Search">
-        <input name="previous_query" type="hidden" value="<%= @query %>">
       <% else %>
         <input name="query" class="form-control mr-sm-2" type="search" aria-label="Search">
       <% end %>
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
     </form>
-
     <div class="register-buttons">
       <%= link_to "Register", new_user_registration_path, class:"btn new-button" %>
       <%= link_to "Sign In", new_user_session_path, class:"btn new-button" %>
