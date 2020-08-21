@@ -1,6 +1,6 @@
 <div class="container pt-2">
   <div class="row">
-      <<div class="row-6 d-flex justify-content-center align-items-center imaage">
+      <div class="row-6 d-flex justify-content-center align-items-center imaage">
         <% if @art.photo.attached? %>
           <%= cl_image_tag @art.photo.key, class: "w-50" %>
         <% end %>
@@ -16,8 +16,8 @@
               <li class="p-2 links"><strong><i class="fas fa-truck-pickup"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp<span>39.4 W x 59.1 H x 0.8 in</span></li>
               </ul>
             <div class="buttons d-flex justify-content-center">
-               <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn btn-primary mt-4 p-2" %></p>
-               <p><%= link_to 'Back', arts_path(@arts), class: "btn btn-warning mt-4 ml-3 p-2" %></a></p>
+               <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn new-button mt-4 p-2" %></p>
+               <p><%= link_to 'Back', arts_path(@arts), class: "btn new-button mt-4 ml-3 p-2" %></a></p>
             </div>
             <div class="d-flex shopping-info justify-content-center">
                 <p><i class="fas fa-check"></i></p>
