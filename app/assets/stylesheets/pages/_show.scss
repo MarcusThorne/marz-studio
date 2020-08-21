@@ -18,10 +18,13 @@
   line-height: 2.5;
   line-height: 2.5;
   border-radius: 7px;
+  padding: 24px;
+  padding-top: 0px!important;
 }
 
 .imaage {
-  height: 700px;
+  width: 1200px;
+  margin-top: 24px;
 }
 
 .contents {
@@ -39,6 +42,9 @@
   font-family: 'Source Serif Pro', serif, 'Dancing Script', cursive;
   letter-spacing: 0.1em;
   border-radius: 7px;
+  margin-left: -15px;
+  width: 1104px;
+  margin-bottom: 24px;
 }
 
 .art-name {
