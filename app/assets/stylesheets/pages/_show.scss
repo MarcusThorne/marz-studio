@@ -1,55 +1,36 @@
-.main-header {
-  background-color: #CDCACC;
-  height: 80px;
-  border-color: gray;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Serif+Pro:ital,wght@1,600&display=swap');
+
+.shopping-info {
+  font-size: 13px;
 }
 
-
-.container1 {
-  background-color: #fff;
-  width: 100%;
-  height: 100vh;
-}
-
-.art-photo img {
-  width: 400px;
-  height: 500px;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 3px 3px;
+.un-list {
+  list-style-type: none;
   margin-left: 60px;
 }
 
-.art-description {
-  height: 250px;
-  width: 500px;
-  border-style: solid;
-  border-width: 3px;
-  margin-top: 20px;
-  border-color: gray;
+.description {
+  // box-shadow: 2px 2px 5px #888888;
+  height: 375px;
+  font-family: 'Source Serif Pro', serif, 'Dancing Script', cursive;
+  line-height: 2.5;
+  font-size: 18px;
 }
-.art-info {
-  padding-left: 30px;
-  margin-bottom: 30px;
+.btn {
+  border-radius: 4px;
+}
+.contents {
+  // box-shadow: 2px 2px 5px #888888;
+}
+.quotes {
+  font-family: 'Source Serif Pro', serif, 'Dancing Script', cursive;
+  letter-spacing: 0.1em;
 }
 
-.right {
-  margin-top: 70px;
+.art-name {
+  font-family: 'Source Serif Pro', serif, 'Dancing Script', cursive;
   margin-left: 70px;
 }
-.left {
-  margin-top: 30px;
-}
 
-#price-tag {
-  margin-top: 20px;
-  font-size: 20px;
-}
-button {
-  margin-left: 200px;
-  border-radius: 10px;
-  margin-top: 50px;
-  padding: 30px;
-}
 
 
