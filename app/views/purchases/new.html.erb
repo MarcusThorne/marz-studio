@@ -1,8 +1,8 @@
 <div class="container font-oswald full-page">
 <h3 class="d-flex justify-content-center font-oswald mt-4"><%= @art.name %></h3>
-
+>
   <%= simple_form_for [@art, @purchase] do |f| %>
-    <div class="form mt-1" style="display: flex; flex-direction: column;">
+    <div class="form mt-1" style="display: flex; flex-direction: column; justify-content: space-between; width: 40%; margin-left: 340px; ">
       <label for="">Card Holder Name</label>
       <input class="bottom-change" name="purchase[card_holder_name]" type="Card Number" placeholder="Card Holder Name">
       <label for="">Card Number</label>
