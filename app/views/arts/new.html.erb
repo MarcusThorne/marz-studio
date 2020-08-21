@@ -6,7 +6,11 @@
 
     <%= f.input :artist %>
 
-    <%= f.input :style %>
+    <div style="display: flex; justify-content: space-between;">
+      <%= f.input :category %>
+      <%= f.input :style %>
+      <%= f.input :subject %>
+    </div>
 
     <%= f.input :price %>
 

@@ -3,9 +3,13 @@ class ArtsController < ApplicationController
     if params[:query].present?
       @arts = Art.search_by_title_and_artist(params[:query])
       @query = params[:query]
-      # if params[:query] == params[:previous_query]
-      #   redirect_to arts_path
-      # end
+    else
+      @arts = Art.all
+    end
+
+    if params[:filter].present?
+      @arts = Art.filter_by_style_and_price(params[:filter])
+      @filter = params[:filter]
     else
       @arts = Art.all
     end
@@ -27,6 +31,11 @@ class ArtsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @art.destroy
+    redirect_to art_path
   end
 
   private
