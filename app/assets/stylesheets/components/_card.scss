@@ -1,9 +1,9 @@
 .arts-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 80%;
   grid-gap: auto!important;
-  margin-left: 50px;
+  margin-left: 12px;
 }
 
 .arts-cards a {
