@@ -24,7 +24,7 @@
                 <% end %>
               
                 <div class="art-card-price">
-                  £<%= art.price %>
+                 £<%= number_with_delimiter( art.price , delimiter: ",") %>
                 </div>
 
                 <div class="card-content" style="display:flex; justify-content:space-between;">
