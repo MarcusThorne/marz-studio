@@ -25,10 +25,10 @@
 
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <i class="drop-down-arrow fas fa-caret-down"></i>
+            <%# <i class="drop-down-arrow fas fa-caret-down"></i> %>
           <% else %>
             <%= image_tag "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <i class="drop-down-arrow fas fa-caret-down"></i>
+            <%# <i class="drop-down-arrow fas fa-caret-down"></i> %>
           <% end %>
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
