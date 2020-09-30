@@ -34,7 +34,7 @@
 ![Screenshot 2020-08-21 at 10 01 01](https://user-images.githubusercontent.com/46029164/90872979-4fff8700-e395-11ea-8bcd-179739797c10.png)
 
 This repository contains a web application where users can buy and sell art works.
-This Rails app is generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates),
+This Rails app a student project which is generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates),
 which is created using Rails, PostgreSQL and Devise. The live website has been deployed to
 Heroku. This project was developed by [Marcus](https://github.com/MarcusThorne),
 [Aidan](https://github.com/Scotland05), [Rohit](https://github.com/Ritz2286) & [Zee](https://github.com/zeemai).
