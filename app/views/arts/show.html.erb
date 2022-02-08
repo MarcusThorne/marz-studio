@@ -9,11 +9,10 @@
         <div class="bg-light p-3 contents mt-1">
             <h1 class="p-2 art-name ml-4 mt-3"><strong>"&nbsp<%= @art.name %>&nbsp"</strong></h1>
               <ul class="un-list">
-              <li class="p-2 links"><strong><i class="fas fa-user"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= @art.artist %></li>
-              <li class="p-2 links"><strong><i class="fas fa-location-arrow"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= "London" %></li>
-              <li class="p-2 links"><strong><i class="fas fa-pound-sign"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= @art.price %></li>
-              <li class="p-2 links"><strong><i class="fas fa-paint-brush"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span><%= @art.style %></span></li>
-              <li class="p-2 links"><strong><i class="fas fa-truck-pickup"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp<span>39.4 W x 59.1 H x 0.8 in</span></li>
+                <li class="p-2 links"><strong><i class="fas fa-user"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= @art.artist %></li>
+                <li class="p-2 links"><strong><i class="fas fa-location-arrow"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= "London" %></li>
+                <li class="p-2 links"><strong><i class="fas fa-pound-sign"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= @art.price %></li>
+                <li class="p-2 links"><strong><i class="fas fa-truck-pickup"></i></strong>&nbsp&nbsp&nbsp&nbsp&nbsp<span>39.4 W x 59.1 H x 0.8 in</span></li>
               </ul>
             <div class="buttons d-flex justify-content-center">
                <p><%= link_to 'Purchase', new_art_purchase_path(@art), class: "btn new-button mt-4 p-2" %></p>

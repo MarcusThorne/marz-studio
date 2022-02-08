@@ -11,14 +11,16 @@
   </div>
   <div class="carousel-item carousel-photo-2 carousel-text">
     <div class="carousel-inner-1">
-      <%= link_to "Sell Art", arts_path, class: "carousel-text" %>
+      <%= link_to "Sell Art",  new_user_session_path, class: "carousel-text" %>
     </div>
   </div>
-  <div class="carousel-item carousel-photo-3 carousel-text">
-    <div class="carousel-inner-1">
-      <%= link_to "Get Lucky", art_path(@art), class: "carousel-text" %>
+  <% if @art %>
+    <div class="carousel-item carousel-photo-3 carousel-text">
+        <div class="carousel-inner-1">
+        <%= link_to "Get Lucky", art_path(@art), class: "carousel-text" %>
+        </div>
     </div>
-  </div>
+  <% end %>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

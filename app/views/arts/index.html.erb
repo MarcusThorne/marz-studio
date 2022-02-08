@@ -8,9 +8,9 @@
         <h2 style="font-family: 'Montserrat', sans-serif; color: #424242;"><strong>View our Gallery</strong></h2>
         <p>MARZ studio is an art gallery specialising in original contemporary and classical art for sale <br> including paintings and photographs. We are delighted to occasionally host private viewing <br> and special exhibitions. If you like the website feel free to give us a star <a href="https://github.com/MarcusThorne/MARZ_studio" target="blank">here</a>.</p>
       </div>
-      
+
       <div style="display: flex">
-      
+
         <div style="display: flex; flex-direction: column;">
           <%= render "filter", filter: @filter %>
         </div>
@@ -20,9 +20,9 @@
             <%= link_to art_path(art) do %>
               <div class="art-card">
                 <% if art.photo.attached? %>
-                  <%= cl_image_tag art.photo.key,height: 300, width: 250, crop: :fill, id:"photo" %>
+                  <%= cl_image_tag art.photo.key, height: 300, width: 250, crop: :fill, id:"photo" %>
                 <% end %>
-              
+
                 <div class="art-card-price">
                  £<%= number_with_delimiter( art.price , delimiter: ",") %>
                 </div>
@@ -40,6 +40,6 @@
         </div>
       </div>
     </div>
-  
+
   </body>
 </div>
